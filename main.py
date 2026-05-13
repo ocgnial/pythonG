@@ -1,15 +1,14 @@
 #Jeux video
 import pygame
+import pytmx
+import pyscroll
 
-pygame.init()
+from Game import Game
 
-pygame.display.set_mode((800, 600))
-pygame.display.set_caption("Jeux video")
+if __name__ == '__main__':
+    pygame.init()
+    game = Game()
+    game.run()
 
-continuer = True
-while continuer:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            continuer = False
+ 
 
-pygame.quit()

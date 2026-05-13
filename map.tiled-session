@@ -1,0 +1,45 @@
+{
+    "activeFile": "map.tmx",
+    "automapping.whileDrawing": false,
+    "expandedProjectPaths": [
+        "."
+    ],
+    "fileStates": {
+        "map.tmx": {
+            "scale": 2,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 527.5,
+                "y": 380
+            }
+        },
+        "nature.tsx": {
+            "scaleInDock": 3,
+            "scaleInEditor": 1
+        }
+    },
+    "last.exportedFilePath": "D:/dev/python/pygame/Game1/pythonG",
+    "last.imagePath": "D:/dev/python/pygame/Game1/pythonG",
+    "map.height": 50,
+    "map.lastUsedExportFilter": "Tous les Fichiers (*)",
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 16,
+    "map.tileWidth": 16,
+    "map.width": 50,
+    "openFiles": [
+        "map.tmx",
+        "nature.tsx"
+    ],
+    "project": "map.tiled-project",
+    "recentFiles": [
+        "nature.tsx",
+        "map.tmx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    },
+    "tileset.transparentColor": "#000000",
+    "tileset.useTransparentColor": true
+}
