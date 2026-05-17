@@ -20,7 +20,17 @@ class Game:
         # generer un jour
         player_position = tmx_data.get_object_by_name("player")
         self.player = Player(player_position.x, player_position.y)
-           
+
+        # Objets de collision
+        self.walls = [] 
+        for obj in tmx_data.objects:
+   
+            
+            if obj.name == "collision":
+                print(obj.name)
+                self.walls.append(pygame.Rect(obj.x, obj.y, obj.width, obj.height))
+               
+            print(self.walls.count)
 
         # dessiner groupe de calques
 
@@ -45,6 +55,12 @@ class Game:
             self.player.move_right()
             self.player.change_animation('right')
 
+    def update(self):
+        self.group.update()
+        #verification collision
+        for sprite in self.group.sprites():
+            if sprite.feet.collidelist(self.walls) > -1:
+                sprite.move_back()
 
     def run(self):
         clock = pygame.time.Clock()
@@ -53,9 +69,9 @@ class Game:
         continuer = True
             
         while continuer:
-
+            self.player.save_location()
             self.handle_input()
-            self.group.update()
+            self.update()
             self.group.center(self.player.rect)
             self.group.draw(self.screen)
             pygame.display.flip()
